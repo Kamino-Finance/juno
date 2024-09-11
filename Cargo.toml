@@ -1,0 +1,37 @@
+[package]
+name = "juno"
+version = "0.1.0"
+edition = "2021"
+authors = ["Olivier EBLE <olivier@eble.fr>"]
+description = "Async jup.ag v4 client to get decompiled instructions with lookup tables"
+license = "Apache-2.0 OR MIT"
+keywords = ["solana", "jupiter", "jupag"]
+categories = ["cryptography::cryptocurrencies"]
+rust-version = "1.59"
+readme = "README.md"
+
+[dependencies]
+solana-program = "1.14.5"
+solana-sdk = "1.14.5"
+solana-client = "1.14.5"
+thiserror = "1.0"
+solana-address-lookup-table-program = "1.14.5"
+itertools = "0.10"
+serde = "1.0"
+serde_derive = "1.0"
+serde_json = "1.0"
+url = "2.2"
+serde_with = "1.14.0"
+base64 = "0.13.0"
+bincode = "1.3.0"
+futures = "0.3.11"
+async-trait = "0.1.59"
+
+[dependencies.reqwest]
+version = "0.11"
+features = ["json", "multipart"]
+
+[dev-dependencies]
+tokio = {version = "1.10.0", features = ["full"]}
+spl-associated-token-account = "1.1.1"
+spl-token = "3.5.0"
